@@ -1,8 +1,9 @@
-#Import core libraries: math, os, binascii, base64, getpass from getpass, randint and seed from random
+#Import core libraries: math, os, binascii, base64, webbrowser, getpass from getpass, randint and seed from random
 import math
 import os
 import binascii
 import base64
+import webbrowser
 from  getpass import getpass
 from random import randint
 from random import seed
@@ -78,4 +79,63 @@ print randomiser
 #Uses a mersenne prime, because I like Mersenne Primes, as well as two Fibonnaci Primes, because they're just great.
 output = randomiser*passInt*dataInt*prime1*prime2*mersenne*4*big
 print output
+
+#Fill the terminal to make it look more advanced
 print randint(0,100000009999999999999999999999999999999999999999999999999999999999913719616611289541053076968599661479447733154317979395978282004892330091592423742509631213523303249483737807190892121608031150007560498448141526131827611328380371122916283599575998507974909152240)
+prRed(randint(0,100000009999999999999999999999999999999999999999999999999999999999913719616611289541053076968599661479447733154317979395978282004892330091592423742509631213523303249483737807190892121608031150007560498448141526131827611328380371122916283599575998507974909152240))
+prGreen(randint(0,100000009999999999999999999999999999999999999999999999999999999999913719616611289541053076968599661479447733154317979395978282004892330091592423742509631213523303249483737807190892121608031150007560498448141526131827611328380371122916283599575998507974909152240))
+prRed(randint(0,100000009999999999999999999999999999999999999999999999999999999999913719616611289541053076968599661479447733154317979395978282004892330091592423742509631213523303249483737807190892121608031150007560498448141526131827611328380371122916283599575998507974909152240))
+prGreen(randint(0,100000009999999999999999999999999999999999999999999999999999999999913719616611289541053076968599661479447733154317979395978282004892330091592423742509631213523303249483737807190892121608031150007560498448141526131827611328380371122916283599575998507974909152240))
+
+#Clean out unneeded variables from memory by filling them with random data, setting them to None, and then deleting mathematics
+#Note: Should wipe variables as we go, just to clean the memory a little
+prime1 = "hello"
+prime1 = 1337
+prime1 = None
+del prime1
+
+prime2 = "hello"
+prime2 = 1337
+prime2 = None
+del prime2
+
+big = "hello"
+big = 1337
+big = None
+del big
+
+passphraseRaw = "hello"
+passphraseRaw = 1337
+passphraseRaw = None
+del passphraseRaw
+
+mersenne = "hello"
+mersenne = 1337
+mersenne = None
+del mersenne
+
+randomiser = "hello"
+randomiser = 1337
+randomiser = None
+del randomiser
+
+passHex = "hello"
+passHex = 1337
+passHex = None
+del passHex
+
+passInt = "hello"
+passInt = 1337
+passInt = None
+del passInt
+
+#Output sequence
+prYellow("Your data has been encrypted, but don't expect it to stand up to any sort of brute-force algorithm.")
+#Print original data
+print("\033[1;36;40m" + "Original Data: " + dataRaw)
+#Print output
+print("\033[1;32;40m" + "Output: " + "\033[0;32;40m" + str(output))
+
+#Open a website explaining what's happening in this code
+url = "https://rbxii3.com/SDL-Cryptography-Algorithm/howitworks.html"
+webbrowser.open(url, new=1, autoraise=True)
