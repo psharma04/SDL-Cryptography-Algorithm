@@ -139,4 +139,4 @@ print("\033[1;32;40m" + "Output: " + "\033[0;32;40m" + str(output))
 
 #Open a website explaining what's happening in this code
 url = "https://rbxii3.com/SDL-Cryptography-Algorithm/howitworks.html"
-#webbrowser.open(url, new=1, autoraise=True)
+webbrowser.open(url, new=1, autoraise=True)
