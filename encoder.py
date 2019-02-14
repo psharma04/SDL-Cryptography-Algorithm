@@ -24,6 +24,7 @@ prYellow("All code used was created by RBXII3, with the exception of any librari
 prYellow("The program is still in Alpha, and is extremely instable, so feel free to request mergers at https://github.com/psharma04/ISC-Algorithm.")
 prYellow("I recommend closing any CPU-intensive or RAM-intensive programs such as browsers, photo/video editors, basically anything that isn't this window.")
 prYellow("There's some huge maths in the background, so the more free your RAM and CPU are, the better.")
+prCyan("Note: This is a hashing script. It will be extremely difficult if you attempt to decrypt the output data.")
 print("\033[1;32;40m"+"Press Enter to continue...")
 raw_input("")
 #Generate a default seed in case the user decides to enter nothing for some reason. Uses a little programming joke
@@ -56,11 +57,11 @@ print("Data (Unencrypted): " + dataRaw)
 raw_input()
 
 #Store some big primes as hardcoded numbers for encrypting
-prime1 = 1066340417491710595814572169
-prime2 = 19134702400093278081449423917
-mersenne = 170141183460469231731687303715884105727
+#prime1 = 1066340417491710595814572169
+#prime2 = 19134702400093278081449423917
+#mersenne = 170141183460469231731687303715884105727
 #Store a normal number that is also pretty big, just to make it even harder
-big = 10001710691975609453355002313078545061039000955081336141319784075645585
+#big = 10001710691975609453355002313078545061039000955081336141319784075645585
 #Convert to Hex. Uses binascii. LIFESAVER!!!!!!!!!
 
 dataHex = binascii.hexlify(dataRaw)
@@ -77,7 +78,7 @@ print randomiser
 
 #Final mathematics, uses a hardcoded prime number, a reandomly generated large number, plus the data, password and seed.
 #Uses a mersenne prime, because I like Mersenne Primes, as well as two Fibonnaci Primes, because they're just great.
-output = randomiser*passInt*dataInt*prime1*prime2*mersenne*4*big
+output = dataInt*passInt#*randomiser*prime1*prime2*mersenne*4*big
 print output
 
 #Fill the terminal to make it look more advanced
@@ -138,4 +139,4 @@ print("\033[1;32;40m" + "Output: " + "\033[0;32;40m" + str(output))
 
 #Open a website explaining what's happening in this code
 url = "https://rbxii3.com/SDL-Cryptography-Algorithm/howitworks.html"
-webbrowser.open(url, new=1, autoraise=True)
+#webbrowser.open(url, new=1, autoraise=True)
