@@ -21,7 +21,7 @@ def prBlack(skk): print("\033[98m {}\033[00m" .format(skk))
 #Introduction to the script, press enter to continue
 prYellow("Welcome to ISC, the Inferior Security Algorithm!")
 prYellow("All code used was created by RBXII3, with the exception of any libraries, which can be viewed by editing this file.")
-prYellow("The program is still in Alpha, and is extremely instable, so feel free to request mergers at https://github.com/psharma04/ISC-Algorithm.")
+prYellow("The program is still in Alpha, and is extremely instable, so feel free to request mergers at https://github.com/psharma04/SDL-Cryptography-Algorithm.")
 prYellow("I recommend closing any CPU-intensive or RAM-intensive programs such as browsers, photo/video editors, basically anything that isn't this window.")
 prYellow("There's some huge maths in the background, so the more free your RAM and CPU are, the better.")
 prCyan("Note: This is a hashing script. It will be extremely difficult if you attempt to decrypt the output data.")
