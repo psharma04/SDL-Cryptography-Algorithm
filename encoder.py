@@ -24,6 +24,7 @@ prYellow("All code used was created by RBXII3, with the exception of any librari
 prYellow("The program is still in Alpha, and is extremely instable, so feel free to request mergers at https://github.com/psharma04/SDL-Cryptography-Algorithm.")
 prYellow("I recommend closing any CPU-intensive or RAM-intensive programs such as browsers, photo/video editors, basically anything that isn't this window.")
 prYellow("There's some huge maths in the background, so the more free your RAM and CPU are, the better.")
+prPurple("Please make sure you are using Python 2.x, or this script will not work")
 prCyan("Note: This is a hashing script. It will be extremely difficult if you attempt to decrypt the output data.")
 print("\033[1;32;40m"+"Press Enter to continue...")
 raw_input("")
