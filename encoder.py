@@ -58,11 +58,11 @@ print("Data (Unencrypted): " + dataRaw)
 raw_input()
 
 #Store some big primes as hardcoded numbers for encrypting
-#prime1 = 1066340417491710595814572169
-#prime2 = 19134702400093278081449423917
-#mersenne = 170141183460469231731687303715884105727
+prime1 = 1066340417491710595814572169
+prime2 = 19134702400093278081449423917
+mersenne = 170141183460469231731687303715884105727
 #Store a normal number that is also pretty big, just to make it even harder
-#big = 10001710691975609453355002313078545061039000955081336141319784075645585
+big = 10001710691975609453355002313078545061039000955081336141319784075645585
 #Convert to Hex. Uses binascii. LIFESAVER!!!!!!!!!
 
 dataHex = binascii.hexlify(dataRaw)
@@ -79,7 +79,7 @@ print randomiser
 
 #Final mathematics, uses a hardcoded prime number, a reandomly generated large number, plus the data, password and seed.
 #Uses a mersenne prime, because I like Mersenne Primes, as well as two Fibonnaci Primes, because they're just great.
-output = dataInt*passInt#*randomiser*prime1*prime2*mersenne*4*big
+output = dataInt*passInt*randomiser*prime1*prime2*mersenne*4*big
 print output
 
 #Fill the terminal to make it look more advanced
