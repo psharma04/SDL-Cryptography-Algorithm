@@ -1,6 +1,7 @@
 #Import core libraries: math, os, binascii, webbrowser, getpass from getpass, randint and seed from random
 import math
 import os
+import sys
 import binascii
 import webbrowser
 from  getpass import getpass
@@ -136,3 +137,5 @@ print("\033[1;32;40m" + "Output: " + "\033[0;32;40m" + str(output))
 #Open a website explaining what's happening in this code
 url = "https://school.rbxii3.tk/LAP-SDL/Cryptography/howitworks.html"
 webbrowser.open(url, new=1, autoraise=True)
+sys.exit
+exit
