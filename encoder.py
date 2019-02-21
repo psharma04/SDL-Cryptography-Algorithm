@@ -1,8 +1,7 @@
-#Import core libraries: math, os, binascii, base64, webbrowser, getpass from getpass, randint and seed from random
+#Import core libraries: math, os, binascii, webbrowser, getpass from getpass, randint and seed from random
 import math
 import os
 import binascii
-import base64
 import webbrowser
 from  getpass import getpass
 from random import randint
@@ -36,27 +35,15 @@ if dataRaw == None:
     prRed("Error: No data entered. Killing script...")
     exit
 passphraseRaw = getpass(prompt="Please enter a password: ")
-#check for blank password not working yet
-if passphraseRaw == None:
-    print "Error: No data entered. Killing script..."
-    exit
-if passphraseRaw == "\r":
-    print "Error: No data entered. Killing script..."
-    exit
-if passphraseRaw == "\n":
-    print "Error: No data entered. Killing script..."
-    exit
-if passphraseRaw == "\r\n":
-    print "Error: No data entered. Killing script..."
-    exit
-#End of blank password check
-
+seed1 = raw_input("Enter a random bit of textor numbers. Make sure you remember it: ")
 #Confirm data and passcode
 print("Confirmation sequence: If any of this information is incorrect, please terminate the script with Ctrl-C.")
 print("Otherwise, press Enter.")
 print("Data (Unencrypted): " + dataRaw)
+print("Seed: " + seed1)
 raw_input()
 
+seed(seed1)
 #Store some big primes as hardcoded numbers for encrypting
 prime1 = 1066340417491710595814572169
 prime2 = 19134702400093278081449423917
@@ -76,10 +63,18 @@ passInt = int(passHex, 16)
 #Generate a seed from a pseudorandom algorithm so that it can be reversed by the reciever.
 randomiser = randint(0,8589934593)
 print randomiser
-
+#MOAR PRIMEZ
+prime3 = 113418247
+prime4 = 2326597607
+prime5 = 55108184309
+prime6 = 1487244784733
+prime7 =  16190091787703
+prime8 = 19683306811621
+prime9 = 26049139642319
+prime10 = 28807323103883
 #Final mathematics, uses a hardcoded prime number, a reandomly generated large number, plus the data, password and seed.
 #Uses a mersenne prime, because I like Mersenne Primes, as well as two Fibonnaci Primes, because they're just great.
-output = dataInt*passInt*randomiser*prime1*prime2*mersenne*4*big
+output = dataInt*passInt*randomiser*prime1*prime2*mersenne*4*big*prime3*prime4*prime5*prime6*prime7*prime8*prime9*prime10
 print output
 
 #Fill the terminal to make it look more advanced
@@ -132,12 +127,12 @@ passInt = None
 del passInt
 
 #Output sequence
-prYellow("Your data has been encrypted, but don't expect it to stand up to any sort of brute-force algorithm.")
+prYellow("Your data has been encrypted.")
 #Print original data
 print("\033[1;36;40m" + "Original Data: " + dataRaw)
 #Print output
 print("\033[1;32;40m" + "Output: " + "\033[0;32;40m" + str(output))
 
 #Open a website explaining what's happening in this code
-url = "https://rbxii3.com/SDL-Cryptography-Algorithm/howitworks.html"
+url = "https://school.rbxii3.tk/LAP-SDL/Cryptography/howitworks.html"
 webbrowser.open(url, new=1, autoraise=True)
